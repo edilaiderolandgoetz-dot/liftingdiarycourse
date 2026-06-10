@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(command -v clerk)",
+      "Bash(clerk --version)",
+      "Bash(npm install *)",
+      "Bash(clerk auth *)",
+      "Bash(clerk init *)",
+      "PowerShell(Get-ChildItem *)",
+      "Bash(clerk whoami *)",
+      "Bash(npm root *)",
+      "Bash(ls \"$\\(npm root -g\\)/clerk\")",
+      "Bash(cat \"$\\(npm root -g\\)/clerk/package.json\")",
+      "Bash(npm run *)",
+      "Bash(npx kill-port *)",
+      "Bash(clerk update *)",
+      "Bash(npm list *)",
+      "Bash(clerk doctor *)",
+      "Skill(run)",
+      "Bash(echo \"PID: $!\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(taskkill /PID 3032 /F)",
+      "Bash(taskkill /PID 2101 /F)",
+      "PowerShell(Stop-Process *)",
+      "PowerShell(Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c npm run dev > C:\\\\Users\\\\rolan\\\\AppData\\\\Local\\\\Temp\\\\nextjs-dev.log 2>&1\" -WorkingDirectory \"C:\\\\Users\\\\rolan\\\\liftingdiarycourse\" -WindowStyle Hidden; Write-Output \"Started\")",
+      "PowerShell(Start-Sleep -Seconds 8; $resp = try { Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 10 } catch { $null }; if \\($resp\\) { Write-Output \"HTTP $\\($resp.StatusCode\\)\" } else { Write-Output \"not responding\" })",
+      "PowerShell(Start-Sleep -Seconds 5; $resp = try { Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 10 } catch { $_.Exception.Message }; Write-Output $resp)",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}
