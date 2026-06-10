@@ -27,7 +27,13 @@
       "PowerShell(Start-Sleep -Seconds 8; $resp = try { Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 10 } catch { $null }; if \\($resp\\) { Write-Output \"HTTP $\\($resp.StatusCode\\)\" } else { Write-Output \"not responding\" })",
       "PowerShell(Start-Sleep -Seconds 5; $resp = try { Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 10 } catch { $_.Exception.Message }; Write-Output $resp)",
       "Bash(git init *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git config *)",
+      "Bash(gh auth *)",
+      "PowerShell(gh auth *)",
+      "Bash(git remote *)",
+      "Bash(git push *)"
     ]
   }
 }
