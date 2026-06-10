@@ -1,4 +1,5 @@
 import { SignInButton, SignUpButton, Show } from "@clerk/nextjs";
+import WorkoutDashboard from "@/components/WorkoutDashboard";
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
         <Hero />
       </Show>
       <Show when="signed-in">
-        <Dashboard />
+        <WorkoutDashboard />
       </Show>
     </main>
   );
@@ -71,29 +72,3 @@ const features = [
     description: "Personal records are automatically detected and celebrated.",
   },
 ];
-
-function Dashboard() {
-  return (
-    <section className="flex flex-1 flex-col px-6 py-10 sm:px-10">
-      <div className="mb-8 flex items-center justify-between">
-        <h2 className="text-2xl font-bold text-zinc-900 dark:text-white">Your workouts</h2>
-        <button className="rounded-full bg-zinc-900 px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-zinc-700 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200">
-          + Log workout
-        </button>
-      </div>
-      <EmptyState />
-    </section>
-  );
-}
-
-function EmptyState() {
-  return (
-    <div className="flex flex-1 flex-col items-center justify-center rounded-2xl border border-dashed border-zinc-200 py-24 text-center dark:border-zinc-700">
-      <span className="text-4xl">🏋️</span>
-      <h3 className="mt-4 font-semibold text-zinc-900 dark:text-white">No workouts yet</h3>
-      <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
-        Log your first session to start tracking your progress.
-      </p>
-    </div>
-  );
-}
